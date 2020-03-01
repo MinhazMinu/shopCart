@@ -1,4 +1,5 @@
 //  increment item
+
 document.getElementById("plus").addEventListener("click", function() {
   let itemNo = noOfItem("item");
   itemNo = itemNo + 1;
@@ -40,15 +41,6 @@ document.getElementById("cMinus").addEventListener("click", function() {
   }
 });
 
-function amount() {
-  let iphon = parseInt(document.getElementById("iphonprice").innerText);
-  let cas = parseInt(document.getElementById("casePrice").innerText);
-  let sub = iphon + cas;
-  document.getElementById("subtotal").innerText = sub.toFixed(2);
-  document.getElementById("tex").innerText = (sub * 0.15).toFixed(2);
-  document.getElementById("total").innerText = (sub + sub * 0.15).toFixed(2);
-}
-
 document.getElementById("cphon").addEventListener("click", function() {
   document.getElementById("iphoncart").classList.add("disp");
 
@@ -58,6 +50,23 @@ document.getElementById("ccase").addEventListener("click", function() {
   document.getElementById("ccart").classList.add("disp");
 
   showItemandprice("itemc", "casePrice", 0);
+});
+
+count = 0;
+document.getElementById("btnCupon").addEventListener("click", function() {
+  var x = document.getElementById("cupon").value;
+  if (x === "JSHero" && count === 0) {
+    count = 1;
+    document.getElementById("cupon").value = "";
+    document.getElementById("cupon").placeholder = "Discount $40!!";
+    amount();
+  } else if (count == 1) {
+    document.getElementById("cupon").value = "";
+    document.getElementById("cupon").placeholder = "One time use";
+  } else {
+    document.getElementById("cupon").value = "";
+    document.getElementById("cupon").placeholder = "invalid";
+  }
 });
 
 // funcrion
@@ -70,6 +79,25 @@ document.getElementById("ccase").addEventListener("click", function() {
 //   document.getElementById(productPeice).innerText = 0;
 //   amount();
 // }
+function sub() {
+  let iphon = parseInt(document.getElementById("iphonprice").innerText);
+  let cas = parseInt(document.getElementById("casePrice").innerText);
+  let sub = iphon + cas;
+  return sub;
+}
+
+function amount() {
+  let s = sub();
+  if (count == 1) {
+    document.getElementById("subtotal").innerText =
+      s.toFixed(2) - parseFloat(40);
+  } else {
+    document.getElementById("subtotal").innerText = s.toFixed(2);
+  }
+
+  document.getElementById("tex").innerText = (s * 0.15).toFixed(2);
+  document.getElementById("total").innerText = (s + s * 0.15).toFixed(2);
+}
 
 function showItemandprice(id, productPrice, item) {
   if (productPrice == "iphonprice") {
