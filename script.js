@@ -89,7 +89,7 @@ function sub() {
 
 function amount() {
   let s = sub();
-  if (count == 1) {
+  if (count == 1 && s != 0) {
     document.getElementById("subtotal").innerText =
       s.toFixed(2) - parseFloat(40);
   } else {
