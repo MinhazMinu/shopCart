@@ -83,8 +83,10 @@ button {
 #address {
   background-color: #f6f5fa;
   margin-top: -60px;
+  margin-bottom: 60px;
 }
 .addrow {
+  background-color: #fff;
   width: 60%;
   height: auto;
 }
