@@ -71,8 +71,8 @@ document.getElementById("btnCupon").addEventListener("click", function() {
 });
 
 document.getElementById("chkbtn").addEventListener("click", function() {
-  console.log("sadasdsd");
   document.getElementById("address").classList.remove("disp");
+  document.getElementById("address").scrollIntoView();
 });
 
 // funcrion
