@@ -62,6 +62,9 @@ body {
 .disp {
   display: none;
 }
+.show {
+  display: block;
+}
 button {
   z-index: 3;
 }
@@ -75,4 +78,13 @@ button {
 .form-control-plaintext {
   font-size: 70%;
   text-align: right;
+}
+
+#address {
+  background-color: #f6f5fa;
+  margin-top: -60px;
+}
+.addrow {
+  width: 60%;
+  height: auto;
 }

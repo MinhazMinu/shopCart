@@ -137,13 +137,79 @@
               </div>
             </div>
             <div class="col-md-12 pt-4 pb-4">
-              <button type="button" class="btn btn-success check-out">
+              <button
+                type="button"
+                class="btn btn-success check-out"
+                id="chkbtn"
+              >
                 Check Out
               </button>
             </div>
           </div>
         </div>
       </div>
+    </section>
+    <section id="address" class="container disp add">
+      <h1 class="text-center">Billing Address</h1>
+      <form class="addrow mx-auto">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="inputEmail4"
+              placeholder="Email"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="inputPassword4"
+              placeholder="Password"
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">Address</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputAddress"
+            placeholder="1234 Main St"
+          />
+        </div>
+        <div class="form-group">
+          <label for="inputAddress2">Address 2</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputAddress2"
+            placeholder="Apartment, studio, or floor"
+          />
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">City</label>
+            <input type="text" class="form-control" id="inputCity" />
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputState">State</label>
+            <select id="inputState" class="form-control">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputZip">Zip</label>
+            <input type="text" class="form-control" id="inputZip" />
+          </div>
+        </div>
+        <div class="form-group d-flex justify-content-end"></div>
+        <button type="button" class="btn btn-success">Confirm</button>
+      </form>
     </section>
     <script src="./script.js"></script>
   </body>
