@@ -55,7 +55,8 @@ document.getElementById("ccase").addEventListener("click", function() {
 count = 0;
 document.getElementById("btnCupon").addEventListener("click", function() {
   var x = document.getElementById("cupon").value;
-  if (x === "JSHero" && count === 0) {
+  var y = sub();
+  if (x === "JSHero" && count === 0 && y != 0) {
     count = 1;
     document.getElementById("cupon").value = "";
     document.getElementById("cupon").placeholder = "Discount $40!!";
